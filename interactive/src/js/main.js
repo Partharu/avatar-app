@@ -143,6 +143,7 @@ async function generateText(prompt) {
 
   let generatedText
   let products
+  console.log(`parthi input: ${prompt}`);
   await fetch(`/api/message`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(messages) })
     .then(response => response.json())
     .then(data => {
