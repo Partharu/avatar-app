@@ -112,6 +112,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
         response_message = response["choices"][0]["message"]
     except:
+        logging.info('parthi in message script')
         logging.info(response)
 
     # if the model wants to call a function
